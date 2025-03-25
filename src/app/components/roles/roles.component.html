@@ -1,4 +1,17 @@
 <p>roles works!</p>
-<p> {{isActive}} </p>
-<p>currentDate: {{currentDate}}</p>
-<p>versionNumber: {{versionNumber}}</p>
+<div class="row">
+    <div class="col-3"> 
+        <p> {{firstName}} </p>
+    </div>
+    <div class="col-3"> 
+        <p>currentDate: {{currentDate}}</p>    
+    </div>
+    <div class="col-3"> 
+        <p>versionNumber: {{versionNumber}}</p>
+    </div>
+</div>
+<div class="row">
+    <div class="col-3">
+        <input type="text" [value]="firstName" class="form-control"/>
+    </div>
+</div>
