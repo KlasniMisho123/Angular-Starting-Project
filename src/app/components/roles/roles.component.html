@@ -9,9 +9,31 @@
     <div class="col-3"> 
         <p>versionNumber: {{versionNumber}}</p>
     </div>
+    <div class="col-3"> 
+        <p>selectedState: {{selectedState}}</p>
+    </div>
 </div>
 <div class="row">
     <div class="col-3">
         <input type="text" [value]="firstName" class="form-control"/>
+    </div>
+    <div class="col-3">
+        <input type="text" [(ngModel)]="firstName"/>
+    </div>
+    <div class="col-3">
+        <input [type]="inputType" />
+    </div>
+    <div class="col-3">
+        <select [(ngModel)]="selectedState">
+            <option value="MH">MH</option>
+            <option value="MP">MP</option>
+            <option value="GOA">GOA</option>
+        </select>
+    </div>
+    <div class="col-3 m-4 ">
+        <button class="btn btn-success" (click)="buttonClicked()" >CLICK ME BRO</button>
+    </div>
+    <div class="col-3 m-4 ">
+        <button class="btn btn-danger" (click)="buttonMessage('SANDD')" >CLICK ME Message</button>
     </div>
 </div>
