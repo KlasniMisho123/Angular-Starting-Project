@@ -10,6 +10,20 @@
         </select>
     </div>
     <div class="col-4">
-        
+        <button class="btn btn-warning m-2 " *ngFor="let item of roleList">{{item.role}}</button>
     </div>
+</div>
+<div class="col-12">
+    <table> 
+        <thead>
+            <tr>
+                <th>Sr No</th>
+                <th>Role Name</th>
+            </tr>
+            <tr *ngFor="let item of roleList">
+                <th>{{item.roleId}}</th>
+                <th>{{item.role}}</th>
+            </tr>
+        </thead>
+    </table>
 </div>
