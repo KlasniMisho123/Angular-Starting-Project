@@ -16,6 +16,8 @@ export class DesignationComponent implements OnInit{
   ngOnInit(): void {
     this.masterService.getDesignations().subscribe((res:any)=>{
       this.designationList = res.data;
+    }, error =>{
+      console.log("Designation API ERROR/ Network Down")
     })
   } 
 

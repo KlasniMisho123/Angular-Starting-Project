@@ -22,6 +22,8 @@ export class RolesComponent implements OnInit{
   getAllRoles() {
     this.http.get<APIResponseModel>("https://freeapi.miniprojectideas.com/api/ClientStrive/GetAllRoles").subscribe((res: APIResponseModel)=>{
       this.roleList = res.data;
+    }, error =>{
+      console.log("Roles API ERROR/ Network Down")
     })
   }
   
