@@ -2,7 +2,14 @@
     <div class="col-4">
         <ul>
             <li *ngFor="let item of roleList">{{item.roleId}}: {{item.role}}</li>
-            <li *ngFor="let item of roleList"></li>
         </ul>
+    </div>
+    <div class="col-4">
+        <select>
+            <option *ngFor="let role of roleList" [value]="role.roleId" >{{role.role}}</option>
+        </select>
+    </div>
+    <div class="col-4">
+        
     </div>
 </div>
