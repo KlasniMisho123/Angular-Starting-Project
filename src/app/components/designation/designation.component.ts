@@ -1,5 +1,6 @@
 import { Component, inject, OnInit } from '@angular/core';
 import { MasterService } from '../../services/master.service';
+import { IDesignation } from '../../model/interface/role';
 
 @Component({
   selector: 'app-designation',
@@ -8,11 +9,13 @@ import { MasterService } from '../../services/master.service';
   styleUrl: './designation.component.css'
 })
 export class DesignationComponent implements OnInit{
+  
+  designationList: IDesignation [] = [];
   masterService = inject(MasterService)
 
   ngOnInit(): void {
     this.masterService.getDesignations().subscribe((res:any)=>{
-      
+      this.designationList = res.data;
     })
   } 
 
