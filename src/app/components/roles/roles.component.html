@@ -1,7 +1,8 @@
 <div class="row">
-    <col-4 class="col-4">
+    <div class="col-4">
         <ul>
-            <li *ngFor="let item of rolelList">{{item.role}}</li>
+            <li *ngFor="let item of roleList">{{item.roleId}}: {{item.role}}</li>
+            <li *ngFor="let item of roleList"></li>
         </ul>
-    </col-4>
+    </div>
 </div>
