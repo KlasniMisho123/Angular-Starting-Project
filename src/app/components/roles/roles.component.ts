@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 
 @Component({
@@ -7,12 +7,15 @@ import { FormsModule } from '@angular/forms';
   templateUrl: './roles.component.html',
   styleUrl: './roles.component.css'
 })
-export class RolesComponent {
+export class RolesComponent implements OnInit{
+  
+  ngOnInit(): void {
+    console.log('hi')
+  }
+  
   firstName: string = "Starting Angular Project";
-  angularVersion = "Version 19.2.4";
 
   versionNumber = 19.2;
-  isActive: boolean = false;
   currentDate: Date = new Date();
   inputType: string = "checkbox";
   selectedState: string = '';
