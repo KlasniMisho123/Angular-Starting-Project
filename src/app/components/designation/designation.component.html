@@ -1,14 +1,29 @@
 <div class="row my-4 ">
-    @for (item of designationList; track $index) {
-        <div class="col-3">
-            <div class="card">
-                <div class="card-body">
-                    <h4 class="card-title">ID: {{item.designationId}}</h4>
-                    <p class="card-text">{{item.designation}}.</p>
-                    <a href="#" class="card-link">Card link</a>
-                    <a href="#" class="card-link">Another link</a>
+    @if(isLoader) {
+        <div class="col-12 mb-2 text-center ">
+            <div class="spinner-border text-muted"></div>
+            <div class="spinner-border text-primary"></div>
+            <div class="spinner-border text-success"></div>
+            <div class="spinner-border text-info"></div>
+            <div class="spinner-border text-warning"></div>
+            <div class="spinner-border text-danger"></div>
+            <div class="spinner-border text-secondary"></div>
+            <div class="spinner-border text-dark"></div>
+            <div class="spinner-border text-light"></div>
+        </div>
+    } @else {
+        @for (item of designationList; track $index) {
+            <div class="col-3">
+                <div class="card">
+                    <div class="card-body">
+                        <h4 class="card-title">ID: {{item.designationId}}</h4>
+                        <p class="card-text">{{item.designation}}.</p>
+                        <a href="#" class="card-link">Card link</a>
+                        <a href="#" class="card-link">Another link</a>
+                    </div>
                 </div>
             </div>
-        </div>
-    } 
+        } 
+    }
+   
 </div>
