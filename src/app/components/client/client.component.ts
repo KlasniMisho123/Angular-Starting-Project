@@ -27,9 +27,11 @@ export class ClientComponent implements OnInit {
   }
 
   onSaveClient() {
+    debugger;
     this.clientService.addUpdate(this.clientObj).subscribe((res:APIResponseModel)=> {
       if(res.result) {
         alert("Client Created Successfully")
+        this.loadClient();
       } else {
         alert("Client Create Error")
       }

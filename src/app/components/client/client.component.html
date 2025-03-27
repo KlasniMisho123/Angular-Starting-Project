@@ -16,11 +16,13 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <tr></tr>
-                        <tr></tr>
-                        <tr></tr>
-                        <tr></tr>
-                        <tr></tr>
+                        @for (item of clientList; track $index) {
+                            <tr>{{index + 1}}</tr>
+                            <tr>{{item.companyName}}</tr>
+                            <tr>{{item.contactPersonName}}</tr>
+                            <tr>{{item.contactNo}}</tr>
+                            <tr>{{item.city}}</tr>
+                        }
                     </tbody>
                 </table>
             </div>
