@@ -1,1 +1,30 @@
-<p>client works!</p>
+<div class="row">
+    <div class="col-8">
+        <div class="card-header bg-success">
+            Client List
+        </div>
+        <div class="card-body">
+            <div class="col-12">
+                <table class="table table-bordered my-4 "> 
+                    <thead>
+                        <tr>
+                            <th>Sr No</th>
+                            <th>Role Name</th>
+                        </tr>
+                    </thead>
+                    <tbody *ngFor="let item of roleList; let srno = index">
+                        
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <div class="col-8">
+        <div class="card-header bg-success">
+            New Client
+        </div>
+        <div class="card-body">
+
+        </div>
+    </div>
+</div>
