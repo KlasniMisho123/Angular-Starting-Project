@@ -13,10 +13,10 @@ export class ClientService {
   http = inject(HttpClient)
 
   getAllClients ():Observable<APIResponseModel> {
-    return this.http.get<APIResponseModel>(environment.API_URL + "GetAllDesignation")
+    return this.http.get<APIResponseModel>(environment.API_URL + "GetAllClients")
   }
   addUpdate (obj:Client):Observable<APIResponseModel> {
-    return this.http.post<APIResponseModel>(environment.API_URL + "GetAllDesignation", obj)
+    return this.http.post<APIResponseModel>(environment.API_URL + "GetAllClients", obj)
   }
   deleteClientById(id:number):Observable<APIResponseModel> {
     return this.http.get<APIResponseModel>(environment.API_URL + "DeleteClientByClientId?clientId=" + id)

@@ -17,11 +17,13 @@
                     </thead>
                     <tbody>
                         @for (item of clientList; track $index) {
-                            <tr>{{index + 1}}</tr>
-                            <tr>{{item.companyName}}</tr>
-                            <tr>{{item.contactPersonName}}</tr>
-                            <tr>{{item.contactNo}}</tr>
-                            <tr>{{item.city}}</tr>
+                            <tr>
+                                <!-- <td>{{index + 1}}</td> -->
+                                <td>{{item.companyName}}</td>
+                                <td>{{item.contactPersonName}}</td>
+                                <td>{{item.contactNo}}</td>
+                                <td>{{item.city}}</td>
+                            </tr>
                         }
                     </tbody>
                 </table>

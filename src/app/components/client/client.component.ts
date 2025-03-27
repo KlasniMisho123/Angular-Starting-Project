@@ -17,7 +17,7 @@ export class ClientComponent implements OnInit {
   clientService = inject(ClientService);
 
   ngOnInit(): void {
-    
+    this.loadClient(); 
   }
 
   loadClient() {
