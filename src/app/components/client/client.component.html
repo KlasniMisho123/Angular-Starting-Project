@@ -57,8 +57,8 @@
                     <input type="text" [(ngModel)]="clientObj.pincode"  class="form-control">
                 </div> 
                <div class="col-6">
-                    <label for=""> Adress </label>
-                    <input type="text" [(ngModel)]="clientObj.adress"  class="form-control">
+                    <label for=""> Address </label>
+                    <input type="text" [(ngModel)]="clientObj.address"  class="form-control">
                 </div>
                 <div class="col-6">
                     <label for=""> EmployeeStrength </label>
@@ -80,7 +80,7 @@
             <button class="btn btn-secondary">Reset Client</button>
         </div>
         <div class="col-6">
-            <button class="btn btn-success">Save Client</button>
+            <button class="btn btn-success" (click)="onSaveClient()">Save Client</button>
         </div>
     </div>
 </div>
