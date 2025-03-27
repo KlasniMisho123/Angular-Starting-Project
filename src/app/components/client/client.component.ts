@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Client } from '../../model/class/Client';
 
 @Component({
   selector: 'app-client',
@@ -8,4 +9,6 @@ import { Component } from '@angular/core';
 })
 export class ClientComponent {
 
+  clientObj: Client = new Client();
+  clientList: Client[]= [];
 }
