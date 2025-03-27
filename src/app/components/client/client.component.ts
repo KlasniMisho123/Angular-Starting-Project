@@ -11,6 +11,7 @@ import { APIResponseModel } from '../../model/interface/role';
   styleUrl: './client.component.css'
 })
 export class ClientComponent implements OnInit {
+  
   clientObj: Client = new Client();
   clientList: Client[]= [];
 
