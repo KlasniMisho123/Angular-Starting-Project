@@ -1,4 +1,4 @@
-<div class="row">
+<div class="row mx-4">
     <div class="col-8">
         <div class="card-header bg-success">
             Client List
@@ -9,10 +9,12 @@
                     <thead>
                         <tr>
                             <th>Sr No</th>
-                            <th>Role Name</th>
+                            <th>Company Name</th>
+                            <th>Person Name</th>
+                            <th>Contact No</th>
                         </tr>
                     </thead>
-                    <tbody *ngFor="let item of roleList; let srno = index">
+                    <tbody >
                         
                     </tbody>
                 </table>
@@ -66,6 +68,14 @@
                     <input type="text" class="form-control">
                 </div>
             </div>
+        </div>
+    </div>
+    <div class="row pt-2">
+        <div class="col-6 text-center">
+            <button class="btn btn-secondary">Reset Client</button>
+        </div>
+        <div class="col-6">
+            <button class="btn btn-success">Save Client</button>
         </div>
     </div>
 </div>
