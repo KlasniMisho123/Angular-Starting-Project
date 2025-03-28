@@ -20,6 +20,8 @@ export class ClientComponent implements OnInit {
   clientObj: Client = new Client();
   clientList: Client[]= [];
 
+  constantList = Constant;
+  
   clientService = inject(ClientService);
 
   userList$: Observable<any> = new Observable<any>
