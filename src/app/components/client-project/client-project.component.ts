@@ -3,10 +3,11 @@ import { FormControl, FormGroup, FormsModule, ReactiveFormsModule, Validators } 
 import { ClientService } from '../../services/client.service';
 import { APIResponseModel, ClientProject, Employee } from '../../model/interface/role';
 import { Client } from '../../model/class/Client';
+import { DatePipe } from '@angular/common';
 
 @Component({
   selector: 'app-client-project',
-  imports: [FormsModule,ReactiveFormsModule],
+  imports: [FormsModule,ReactiveFormsModule,DatePipe],
   templateUrl: './client-project.component.html',
   styleUrl: './client-project.component.css'
 })
@@ -42,6 +43,7 @@ export class ClientProjectComponent implements OnInit{
   ngOnInit(): void {
     this.getAllClient();
     this.getAllEmployee();
+    this.getAllClientProject();
   }
 
   getAllEmployee() {
@@ -49,11 +51,18 @@ export class ClientProjectComponent implements OnInit{
       this.employeeList = res.data
     })
   }
+
   getAllClient() {
     this.clientSrv.getAllClients().subscribe((res:APIResponseModel) => {
       this.clientList = res.data
     })
   }
+  getAllClientProject() {
+    this.clientSrv.getAllClientProject().subscribe((res:APIResponseModel) => {
+      this.projectList.set(res.data)
+    })
+  }
+
   onSaveProject() {
     const formValue = this.projectForm.value;
     debugger;

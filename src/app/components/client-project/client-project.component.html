@@ -9,16 +9,25 @@
                 <table class="table table-bordered my-4">
                     <thead>
                         <tr>
-                            <th>Sr No</th>
-                            <th>Company Name</th>
-                            <th>Person Name</th>
-                            <th>Contact No</th>
-                            <th>City</th>
-                            <th>Action</th>
+                            <th>No</th>
+                            <th>Client Name</th>
+                            <th>Project Name</th>
+                            <th>Emp Name</th>
+                            <th>Start Date</th>
+                            <th>Exp End Date</th>
                         </tr>
                     </thead>
                     <tbody>
-                       
+                        @for(item of projectList(); track $index) {
+                            <tr> 
+                                <td>{{$index+1}}</td>
+                                <td>{{item.clientName}}</td>
+                                <td>{{item.projectName}}</td>
+                                <td>{{item.empName}}</td>
+                                <td>{{item.startDate | date: 'dd-MMM-yyyy'}}</td>
+                                <td>{{item.expectedEndDate | date: 'dd-MMM-yyyy'}}</td>
+                            </tr>
+                        }
                     </tbody>
                 </table>
             </div>
