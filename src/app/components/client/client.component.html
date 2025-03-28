@@ -1,9 +1,9 @@
-    <p>{{clientObj | json}}</p>
+    <!-- <p>{{clientObj | json}}</p>
     <ul>
         @for (item of userList$ | async ; track $index) {
             <li>{{item.username}}</li>
         }
-    </ul>
+    </ul> -->
     <div class="row ">
         <div class="col-md-6">
             <div class="card">
@@ -31,8 +31,8 @@
                                     <td>{{item.contactNo}}</td>
                                     <td>{{item.city}}</td>
                                     <td class="col">
-                                        <button class="btn btn-primary"(click)="onEdit(item)">✏️Edit</button>
-                                        <button class="btn btn-danger" (click)="onDelete(item.clientId)">🗑️Delete</button>
+                                        <button class="btn btn-primary mx-2"(click)="onEdit(item)">✏️Edit</button>
+                                        <button class="btn btn-danger mx-2" (click)="onDelete(item.clientId)">🗑️Delete</button>
                                     </td>
                                 </tr>
                             }
