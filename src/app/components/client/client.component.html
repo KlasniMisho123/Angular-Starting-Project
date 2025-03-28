@@ -99,7 +99,7 @@
                                 <button class="btn btn-secondary" (click)="clearClientHandle()">Reset Client</button>
                             </div>
                             <div class="col-6 text-center">
-                                <button class="btn btn-success" (click)="onSaveClient()">
+                                <button class="btn btn-success" [disabled]="!form.valid" (click)="onSaveClient()">
                                     {{clientObj.clientId != 0 ? 'Update Client' : 'Save Client'}}
                                 </button>
                             </div>
