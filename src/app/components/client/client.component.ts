@@ -43,13 +43,17 @@ export class ClientComponent implements OnInit {
   clearClientHandle() {
     alert("Client Inputs Cleared Successfully!")
   }
-  deleteClient(id:number) {
-    this.clientService.deleteClientById(id).subscribe((res:APIResponseModel) => {
-      if(res.result) {
-        alert("Client Deleted Successfully!")
-      }else {
-        alert("Client Delete Error")
-      }
-    })
+  onDelete(id:number) {
+    const isDelete = confirm("Are You Sure You Want To Delete This User?");
+    if(isDelete) {
+      this.clientService.deleteClientById(id).subscribe((res:APIResponseModel) => {
+        if(res.result) {
+          alert("Client Deleted Successfully!")
+          this.loadClient();
+        } else {
+          alert("Client Delete Error")
+        }
+      })
+    } 
   }
 }
