@@ -31,10 +31,24 @@ export class ClientComponent implements OnInit {
     // debugger;
     this.clientService.addUpdate(this.clientObj).subscribe((res:APIResponseModel)=> {
       if(res.result) {
-        alert("Client Created Successfully")
+        alert("Client Created Successfully!")
         this.loadClient();
+        this.clientObj = new Client();
       } else {
         alert("Client Create Error")
+      }
+    })
+  }
+
+  clearClientHandle() {
+    alert("Client Inputs Cleared Successfully!")
+  }
+  deleteClient(id:number) {
+    this.clientService.deleteClientById(id).subscribe((res:APIResponseModel) => {
+      if(res.result) {
+        alert("Client Deleted Successfully!")
+      }else {
+        alert("Client Delete Error")
       }
     })
   }
