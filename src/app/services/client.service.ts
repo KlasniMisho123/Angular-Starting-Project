@@ -12,6 +12,10 @@ export class ClientService {
 
   http = inject(HttpClient)
 
+  getAllUser():Observable<APIResponseModel>{
+    return this.http.get<APIResponseModel>("https://jsonplaceholder.typicode.com/users")
+  }
+
   getAllClients ():Observable<APIResponseModel> {
     return this.http.get<APIResponseModel>(environment.API_URL + "GetAllClients")
   }
