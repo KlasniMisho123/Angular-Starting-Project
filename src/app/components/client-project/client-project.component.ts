@@ -1,4 +1,4 @@
-import { Component, inject, OnInit } from '@angular/core';
+import { Component, inject, OnInit, signal } from '@angular/core';
 import { FormControl, FormGroup, FormsModule, ReactiveFormsModule, Validators } from '@angular/forms';
 import { ClientService } from '../../services/client.service';
 import { APIResponseModel, Employee } from '../../model/interface/role';
@@ -31,6 +31,8 @@ export class ClientProjectComponent implements OnInit{
   clientSrv = inject(ClientService)
   employeeList: Employee[]=[];
   clientList: Client[]=[];
+
+  firstName = signal("Angular 18")
 
   ngOnInit(): void {
     this.getAllClient();

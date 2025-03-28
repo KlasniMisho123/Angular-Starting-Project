@@ -2,7 +2,7 @@
     <div class="col-md-6">
         <div class="card">
             <div class="card-header bg-success">
-                Client List
+                Client List - {{firstName()}} 
             </div>
             <div class="card-body">
                 <table class="table table-bordered my-4">
@@ -17,19 +17,7 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <!-- @for (item of clientList; track $index) {
-                            <tr>
-                                <td>{{$index + 1}}</td>
-                                <td>{{item.companyName}}</td>
-                                <td>{{item.contactPersonName}}</td>
-                                <td>{{item.contactNo}}</td>
-                                <td>{{item.city}}</td>
-                                <td class="col">
-                                    <button class="btn btn-primary"(click)="onEdit(item)">✏️Edit</button>
-                                    <button class="btn btn-danger" (click)="onDelete(item.clientId)">🗑️Delete</button>
-                                </td>
-                            </tr>
-                        } -->
+                       
                     </tbody>
                 </table>
             </div>
