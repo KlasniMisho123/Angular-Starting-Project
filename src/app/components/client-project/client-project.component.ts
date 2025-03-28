@@ -47,5 +47,7 @@ export class ClientProjectComponent implements OnInit{
       this.clientList = res.data
     })
   }
-
+  onSaveProject() {
+    alert("SAVED")
+  }
 }
