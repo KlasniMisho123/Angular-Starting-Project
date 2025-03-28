@@ -1,7 +1,7 @@
     <p>{{clientObj | json}}</p>
     <ul>
         @for (item of userList$ | async ; track $index) {
-            <li>{{item.userName}}</li>
+            <li>{{item.username}}</li>
         }
     </ul>
     <div class="row ">

@@ -47,7 +47,7 @@
                             <label for="">Project Name</label>
                             <input type="text" formControlName="projectName" class="form-control">
                             <div class="text-danger">
-                                @if(projectForm.controls['projectName']?.touched) {
+                                @if(projectForm.controls['projectName'].touched) {
                                     @if(projectForm.controls['projectName'].errors?.['required']) {
                                         <span> <span> 🚩 This Is Required</span></span>
                                     }
