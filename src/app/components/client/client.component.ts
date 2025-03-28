@@ -43,6 +43,7 @@ export class ClientComponent implements OnInit {
   clearClientHandle() {
     alert("Client Inputs Cleared Successfully!")
   }
+
   onDelete(id:number) {
     const isDelete = confirm("Are You Sure You Want To Delete This User?");
     if(isDelete) {
@@ -55,5 +56,8 @@ export class ClientComponent implements OnInit {
         }
       })
     } 
+  }
+  onEdit(data: Client) {
+    this.clientObj = data;
   }
 }
