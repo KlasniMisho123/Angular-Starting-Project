@@ -41,52 +41,51 @@
                 New Client
             </div>
             <div class="card-body">
-                <form #form="ngForm">
+                <form [formGroup]="projectForm">
                     <div class="row">
                         <div class="col-6">
                             <label for="">Project Name</label>
-                            <input type="text" class="form-control">
+                            <input type="text" formControlName="projectName" class="form-control">
                         </div>
                         <div class="col-6">
-                            <label>Start Date</label>
-                            <input type="date" class="form-control">
+                            <label for="">Start Date</label>
+                            <input type="date" formControlName="startDate" class="form-control">
                         </div>
                         <div class="col-6">
-                            <label>Expected End Date</label>
-                            <input type="date" class="form-control">
+                            <label for="">Expected End Date</label>
+                            <input type="date" formControlName="expectedEndDate" class="form-control">
                         </div>
                         <div class="col-6">
-                            <label>Contact Name</label>
-                            <input type="text" class="form-control">
+                            <label for="">Contact Name</label>
+                            <input type="text"  formControlName="contactPerson" class="form-control">
                         </div>
                         <div class="col-6">
-                            <label>Contact Mobile</label>
-                            <input type="text" class="form-control">
+                            <label for="">Contact Mobile</label>
+                            <input type="text"  formControlName="contactPersonContactNo" class="form-control">
                         </div>
                         <div class="col-6">
-                            <label>Contact Email</label>
-                            <input type="text" class="form-control">
+                            <label for="">Contact Email</label>
+                            <input type="text"  formControlName="contactPersonEmailId" class="form-control">
                         </div>
                         <div class="col-6">
-                            <label>Total Employee Count</label>
-                            <input type="text" class="form-control">
+                            <label for="">Total Employee Count</label>
+                            <input type="text"  formControlName="totalEmpWorking" class="form-control">
                         </div>
                         <div class="col-6">
-                            <label>Project Costing</label>
-                            <input type="text" class="form-control">
+                            <label for="">Project Costing</label>
+                            <input type="text"  formControlName="projectCost" class="form-control">
                         </div>
-                        <div class="">
-                            <label>Project Description</label>
-                            <textarea  class="form-control"></textarea>
-                        </div>
-                        <div class="col-6">
-                            <label>Project Cost</label>
-                            <select type="text" class="form-control"></select>
-
+                        <div class="col-12">
+                            <label for="">Project Description</label>
+                            <textarea   formControlName="projectDetails" class="form-control"></textarea>
                         </div>
                         <div class="col-6">
-                            <label>Lead By</label>
-                            <select type="text" class="form-control"></select>
+                            <label for="">Select Client</label>
+                            <select type="text"  formControlName="clientId" class="form-control"></select>
+                        </div>
+                        <div class="col-6">
+                            <label for="">Lead By</label>
+                            <select type="text"  formControlName="leadByEmpId" class="form-control"></select>
                         </div>
                     </div>
                     <div class="row pt-2">
