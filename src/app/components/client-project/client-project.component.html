@@ -81,11 +81,20 @@
                         </div>
                         <div class="col-6">
                             <label for="">Select Client</label>
-                            <select type="text"  formControlName="clientId" class="form-control"></select>
+                            <select type="text"  formControlName="clientId" class="form-control">
+                            @for(item of clientList; track item) {
+                                <option [value]="item.clientId" >{{item.companyName}}</option>
+                            }
+                            </select>
                         </div>
                         <div class="col-6">
                             <label for="">Lead By</label>
-                            <select type="text"  formControlName="leadByEmpId" class="form-control"></select>
+                            <select type="text"  formControlName="leadByEmpId" class="form-control">
+                                <option> Select Employee </option>
+                                @for(item of employeeList; track item) {
+                                    <option [value]="item.empId" >{{item.empName}} - {{item.empCode}}</option>
+                                }
+                            </select>
                         </div>
                     </div>
                     <div class="row pt-2">
