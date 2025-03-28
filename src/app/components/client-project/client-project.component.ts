@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, inject, OnInit } from '@angular/core';
 import { FormControl, FormGroup, FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { ClientService } from '../../services/client.service';
 
 @Component({
   selector: 'app-client-project',
@@ -7,8 +8,8 @@ import { FormControl, FormGroup, FormsModule, ReactiveFormsModule } from '@angul
   templateUrl: './client-project.component.html',
   styleUrl: './client-project.component.css'
 })
-export class ClientProjectComponent {
-
+export class ClientProjectComponent implements OnInit{
+  
   projectForm: FormGroup = new FormGroup({
     clientProjectId: new FormControl(0),
     projectName: new FormControl(""),
@@ -24,4 +25,11 @@ export class ClientProjectComponent {
     contactPersonEmailId:  new FormControl(""),
     clientId: new FormControl("")
   })
+
+  clientSrv = inject(ClientService)
+
+  ngOnInit(): void {
+    
+  }
+
 }
