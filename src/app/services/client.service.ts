@@ -17,6 +17,10 @@ export class ClientService {
     return this.http.get<APIResponseModel>("https://jsonplaceholder.typicode.com/users")
   }
 
+  getAllClientProject():Observable<APIResponseModel>{
+    return this.http.get<APIResponseModel>("https://jsonplaceholder.typicode.com/users")
+  }
+
   getAllClients ():Observable<APIResponseModel> {
     return this.http.get<APIResponseModel>(environment.API_URL + Constant.API_METHOD.GET_ALL_CLIENT)
   }

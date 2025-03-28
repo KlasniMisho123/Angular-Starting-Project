@@ -55,7 +55,7 @@
                                 @if(personName.touched) {
                                     <div class="text-danger">
                                         @if(personName?.errors?.['required']){ 
-                                            <span> {{constantList.VALIDATION_MESSAGE?.REQUIRED}}</span>
+                                            <span> {{constantList.VALIDATION_MESSAGE.REQUIRED}}</span>
                                         }
                                         @if(personName?.errors?.['minlength']){
                                             <span> 🚩 Min Length: 5 Characters</span>

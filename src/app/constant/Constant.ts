@@ -4,7 +4,8 @@ export const Constant = {
         GET_ALL_CLIENT:'GetAllClients',
         ADD_UPDATE_CLIENT: 'AddUpdateClient',
         DELETE_BY_ID:'DeleteClientByClientId?clientId=',
-        UPDATE_CLIENT_PROJECT: 'AddUpdateClientProject'
+        UPDATE_CLIENT_PROJECT: 'AddUpdateClientProject',
+        GET_ALL_CLIENT_PROJECT: 'getAllClientProjects'
     },
     VALIDATION_MESSAGE: {
         REQUIRED: "🚩 This is Required"

@@ -1,7 +1,7 @@
 import { Component, inject, OnInit, signal } from '@angular/core';
 import { FormControl, FormGroup, FormsModule, ReactiveFormsModule, Validators } from '@angular/forms';
 import { ClientService } from '../../services/client.service';
-import { APIResponseModel, Employee } from '../../model/interface/role';
+import { APIResponseModel, ClientProject, Employee } from '../../model/interface/role';
 import { Client } from '../../model/class/Client';
 
 @Component({
@@ -32,7 +32,12 @@ export class ClientProjectComponent implements OnInit{
   employeeList: Employee[]=[];
   clientList: Client[]=[];
 
-  firstName = signal("Angular 18")
+  firstName = signal("Angular 19")
+  projectList = signal<ClientProject[]>([])
+
+  changeFirstName() {
+    this.firstName = signal("Angular 19.4.2")
+  }
 
   ngOnInit(): void {
     this.getAllClient();
