@@ -2,6 +2,7 @@ import { Component, inject, OnInit } from '@angular/core';
 import { FormControl, FormGroup, FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ClientService } from '../../services/client.service';
 import { APIResponseModel, Employee } from '../../model/interface/role';
+import { Client } from '../../model/class/Client';
 
 @Component({
   selector: 'app-client-project',
@@ -29,14 +30,21 @@ export class ClientProjectComponent implements OnInit{
 
   clientSrv = inject(ClientService)
   employeeList: Employee[]=[];
+  clientList: Client[]=[];
 
   ngOnInit(): void {
-    
+    this.getAllClient();
+    this.getAllEmployee();
   }
 
   getAllEmployee() {
     this.clientSrv.getAllEmployee().subscribe((res:APIResponseModel) => {
       this.employeeList = res.data
+    })
+  }
+  getAllClient() {
+    this.clientSrv.getAllClients().subscribe((res:APIResponseModel) => {
+      this.clientList = res.data
     })
   }
 
