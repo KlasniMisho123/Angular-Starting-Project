@@ -100,9 +100,10 @@
                                 <button class="btn btn-secondary" (click)="clearClientHandle()">Reset Client</button>
                             </div>
                             <div class="col-6 text-center">
-                                <button class="btn btn-success" [disabled]="!form.valid" (click)="onSaveClient()">
-                                    {{clientObj.clientId != 0 ? 'Update Client' : 'Save Client'}}
-                                </button>
+                                <app-my-button (onBtnClicked)="onSaveClient()" btnText="{{clientObj.clientId != 0 ? 'Update Client' : 'Save Client'}}" btnClass="btn btn-success" ></app-my-button>
+                                <!-- <button  [disabled]="!form.valid" >
+                                    
+                                </button> -->
                             </div>
                         </div>
                     </form>
