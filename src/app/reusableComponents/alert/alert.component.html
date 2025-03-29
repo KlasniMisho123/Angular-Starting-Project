@@ -1,5 +1,6 @@
 <!-- <div class="alert alert-success alert-dismissible" > -->
 <div class="alert alert-dismissible" [ngClass]="alertType === 'Success' ? 'alert-success' : 'alert-danger'">
+    <!-- <div class="" [className]="alertType=='Success'? ' alert-success alert alert-dismissible' : ' alert-danger alert alert-dismissible'" > -->
     <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
     <strong>{{alertType}}</strong> {{message}}
 </div>
