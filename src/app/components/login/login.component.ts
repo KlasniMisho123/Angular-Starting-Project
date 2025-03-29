@@ -20,7 +20,7 @@ export class LoginComponent {
   onLogin() {
     if(this.loginObj.email == "admin@gmail.com" && this.loginObj.password == "admin123") {
       this.router.navigateByUrl('/client')
-      localStorage.setItem('empErp', this.loginObj.email)
+      localStorage.setItem('empErpUser', this.loginObj.email)
     } else {
       alert("WRONG CREDENTIALS")
     }
