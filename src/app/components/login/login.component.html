@@ -16,7 +16,7 @@
               <input type="password" [(ngModel)]="loginObj.password" name="password" class="form-control form-control-lg" />
               <label class="form-label" for="form1Example23">Password</label>
             </div>
-            <button type="submit" data-mdb-button-init data-mdb-ripple-init class="btn btn-primary btn-lg btn-block">Sign in</button>
+            <button type="submit" (click)="onLogin()" data-mdb-button-init data-mdb-ripple-init class="btn btn-primary btn-lg btn-block">Log in</button>
           </form>
         </div>
       </div>
