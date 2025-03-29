@@ -10,7 +10,7 @@ import { AlertComponent } from '../../reusableComponents/alert/alert.component';
 
 @Component({
   selector: 'app-client',
-  imports: [FormsModule, UpperCasePipe, DatePipe, JsonPipe, AlertComponent],
+  imports: [FormsModule, UpperCasePipe, DatePipe, AlertComponent],
   templateUrl: './client.component.html',
   styleUrl: './client.component.css'
 })
